@@ -6,5 +6,14 @@
   "repository": "https://github.com/kuzanatoliy/prettier-config.git",
   "author": "kuzanatoliy <njkznu@gmail.com>",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "scripts": {
+    "postinstall": "node sample.js"
+  },
+  "peerDependencies": {
+    "prettier": "*"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
 }
