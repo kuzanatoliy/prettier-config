@@ -6,8 +6,5 @@
   "repository": "https://github.com/kuzanatoliy/prettier-config.git",
   "author": "kuzanatoliy <njkznu@gmail.com>",
   "license": "MIT",
-  "private": false,
-  "peerDependencies": {
-    "prettier": "*"
-  }
+  "private": false
 }
