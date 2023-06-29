@@ -1,7 +1,7 @@
 const { resolve } = require("path");
 const { existsSync, copyFileSync } = require("fs");
 
-const rootDir = resolve("../../..", process.cwd());
+const rootDir = resolve(process.cwd(), "../../..");
 const packageJson = require(resolve(rootDir, "package.json"));
 
 const filenames = [
