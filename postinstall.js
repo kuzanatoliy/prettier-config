@@ -1,8 +1,8 @@
 const { resolve } = require("path");
 const { existsSync, copyFileSync } = require("fs");
 
-const rootDir = process.cwd();
-const packageJson = require(resolve(process.cwd(), "package.json"));
+const rootDir = resolve("../../..", process.cwd());
+const packageJson = require(resolve(rootDir, "package.json"));
 
 const filenames = [
   ".prettierrc",
