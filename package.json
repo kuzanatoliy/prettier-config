@@ -2,13 +2,13 @@
   "name": "@kuzanatoliorg/prettier-config",
   "version": "0.0.0",
   "description": "Kuzanatoliorg's prettier configuration",
-  "main": "index.js",
+  "main": "index.json",
   "repository": "https://github.com/kuzanatoliy/prettier-config.git",
   "author": "kuzanatoliy <njkznu@gmail.com>",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "postinstall": "node sample.js"
+    "postinstall": "node postinstall.js"
   },
   "peerDependencies": {
     "prettier": "*"

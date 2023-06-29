@@ -7,14 +7,10 @@ const packageJson = require(resolve(process.cwd(), "package.json"));
 const filenames = [
   ".prettierrc",
   ".prettierrc.json",
-  ".prettierrc.yml",
-  ".prettierrc.yaml",
-  ".prettierrc.json",
   ".prettierrc.js",
   ".prettierrc.cjs",
   "prettier.config.js",
   "prettier.config.cjs",
-  ".prettierrc.toml",
 ];
 
 if (
