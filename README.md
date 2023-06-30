@@ -32,7 +32,7 @@ For manula set up it is possible to add link to package.json
 
     {
       // ...
-      "prettier": "@azz/prettier-config"
+      "prettier": "@kuzanatoliorg/prettier-config"
     }
 
 or import into js config file
