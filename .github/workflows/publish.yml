@@ -1,0 +1,24 @@
+name: publish
+on:
+  push:
+    branches:
+      - master
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+    steps:
+      - uses: actions/checkout@v3
+      - name: tag
+        run: |
+          git config --global user.email "njkznu@gmail.com"
+          git config --global user.name "kuzanatoliy"
+          npm version minor
+          git push
+          git push --tags
+      - name: publish
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
