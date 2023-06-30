@@ -1,0 +1,30 @@
+{
+  "name": "@kuzanatoliorg/prettier-config",
+  "version": "0.0.0",
+  "description": "Kuzanatoliorg's prettier configuration",
+  "main": "index.json",
+  "author": "kuzanatoliy <njkznu@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kuzanatoliy/prettier-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kuzanatoliy/prettier-config/issues"
+  },
+  "homepage": "https://github.com/kuzanatoliy/prettier-config#readme",
+  "keywords": [
+    "prettier",
+    "configuration"
+  ],
+  "scripts": {
+    "postinstall": "node postinstall.js"
+  },
+  "peerDependencies": {
+    "prettier": "*"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
