@@ -1,5 +1,10 @@
+const process = require("process");
 const { resolve } = require("path");
 const { existsSync, copyFileSync } = require("fs");
+
+if (!process.cwd().includes("node_modules")) {
+  process.exit();
+}
 
 const rootDir = resolve(process.cwd(), "../../..");
 const packageJson = require(resolve(rootDir, "package.json"));
