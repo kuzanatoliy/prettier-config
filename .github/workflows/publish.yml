@@ -26,7 +26,7 @@ jobs:
         run: npm version minor
       - name: major tag
         if: github.event_name == 'workflow_dispatch'
-        run: npm version minor
+        run: npm version major
       - name: push commits
         run: |
           git push
