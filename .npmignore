@@ -2,5 +2,6 @@ node_modules
 .github
 .husky
 package-lock.json
+commitlint.config.js
 .prettierrc.js
 .gitignore
