@@ -1,11 +1,24 @@
 name: publish
-on:
-  push:
-    branches:
-      - master
-  workflow_dispatch:
+on: [push, workflow_dispatch]
 jobs:
-  pipeline:
+  quality-gates:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: install dependencies
+        run: npm install
+      - name: prettier
+        run: npm run prettier:check
+  publish:
+    if: github.ref_name == 'master'
+    needs: quality-gates
     runs-on: ubuntu-latest
     strategy:
       matrix:
