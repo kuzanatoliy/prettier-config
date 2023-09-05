@@ -21,7 +21,8 @@
   "scripts": {
     "postinstall": "node postinstall.js",
     "prettier:check": "prettier --check .",
-    "prettier:write": "prettier --write ."
+    "prettier:write": "prettier --write .",
+    "commitlint": "commitlint --edit"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
