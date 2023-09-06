@@ -3,11 +3,11 @@ const { resolve } = require('node:path');
 const { existsSync, copyFileSync } = require('node:fs');
 const { exec } = require('node:child_process');
 
-/*if (!cwd().includes('node_modules')) {
+if (!cwd().includes('node_modules')) {
   exit();
-}*/
+}
 
-const rootDir = resolve(cwd(), './');
+const rootDir = resolve(cwd(), '../../..');
 const packageJson = require(resolve(rootDir, 'package.json'));
 
 const filenames = [
