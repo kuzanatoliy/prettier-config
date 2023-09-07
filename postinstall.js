@@ -1,13 +1,12 @@
-const process = require('process');
-const { resolve } = require('path');
-const { existsSync, copyFileSync } = require('fs');
+const { cwd, exit } = require('node:process');
+const { resolve } = require('node:path');
+const { existsSync, copyFileSync } = require('node:fs');
 
-if (!process.cwd().includes('node_modules')) {
-  process.exit();
+if (!cwd().includes('node_modules')) {
+  exit();
 }
 
-const rootDir = resolve(process.cwd(), '../../..');
-const packageJson = require(resolve(rootDir, 'package.json'));
+const rootDir = resolve(cwd(), '../../..');
 
 const filenames = [
   '.prettierrc',
@@ -18,10 +17,7 @@ const filenames = [
   'prettier.config.cjs',
 ];
 
-if (
-  !packageJson.prettier &&
-  !filenames.find((file) => existsSync(resolve(rootDir, file)))
-) {
+if (!filenames.find((file) => existsSync(resolve(rootDir, file)))) {
   console.info('Create prettier configuration file');
   copyFileSync(
     resolve(__dirname, 'sample.js'),
