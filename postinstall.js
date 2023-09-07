@@ -22,7 +22,7 @@ const filenames = [
 if (!packageJson.prettier) {
   if (existsSync(resolve(rootDir, 'package-lock.json'))) {
     console.info('Install prettier lib by npm');
-    exec('npm install --save-dev prettier', { cwd: rootDir });
+    exec('npm install --save-dev --ignore-scripts prettier', { cwd: rootDir });
   } else if (existsSync(resolve(rootDir, 'yarn.lock'))) {
     console.info('Install prettier lib by yarn');
     exec('yarn add --dev prettier', { cwd: rootDir });
