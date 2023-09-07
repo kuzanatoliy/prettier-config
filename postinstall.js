@@ -1,14 +1,12 @@
 const { cwd, exit } = require('node:process');
 const { resolve } = require('node:path');
 const { existsSync, copyFileSync } = require('node:fs');
-const { exec } = require('node:child_process');
 
 if (!cwd().includes('node_modules')) {
   exit();
 }
 
 const rootDir = resolve(cwd(), '../../..');
-const packageJson = require(resolve(rootDir, 'package.json'));
 
 const filenames = [
   '.prettierrc',
@@ -18,16 +16,6 @@ const filenames = [
   'prettier.config.js',
   'prettier.config.cjs',
 ];
-
-if (!packageJson.prettier) {
-  if (existsSync(resolve(rootDir, 'package-lock.json'))) {
-    console.info('Install prettier lib by npm');
-    exec('npm install --save-dev --ignore-scripts prettier', { cwd: rootDir });
-  } else if (existsSync(resolve(rootDir, 'yarn.lock'))) {
-    console.info('Install prettier lib by yarn');
-    exec('yarn add --dev prettier', { cwd: rootDir });
-  }
-}
 
 if (!filenames.find((file) => existsSync(resolve(rootDir, file)))) {
   console.info('Create prettier configuration file');
