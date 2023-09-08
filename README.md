@@ -1,6 +1,6 @@
 # @kuzanatoliorg/prettier-config
 
-Shared configuration to use prettier library into scope of @kuzantoliorg projects.
+Shared configuration to use a prettier library into the scope of @kuzantoliorg projects.
 
 ## Precondition
 
@@ -24,26 +24,26 @@ yarn add @kuzanatoliorg/prettier-config --dev
 
 ### Usage:
 
-In case if you doesn't have configuration the following **.prettierrc.js** configuration will be generated into repository:
+In case you don't have configuration the following **.prettierrc.js** configuration will be generated into the repository:
 
     module.exports = {
       ...require("@kuzanatoliorg/prettier-config"),
     };
 
-**Note:** Script check ouly .json or .js config files and config into package.json.
+**Note:** Script check only .json or .js config files and config into package.json.
 
-For manula set up it is possible to add link to package.json
+For manual set-up, it is possible to add a link to package.json
 
     {
       // ...
       "prettier": "@kuzanatoliorg/prettier-config"
     }
 
-or import into js config file
+or import into the js config file
 
     module.exports = {
       ...require("@kuzanatoliorg/prettier-config"),
       // Overided rules
     };
 
-**Note:** Only js configuration allows overiding rules.
+**Note:** Only js configuration allows overriding rules.
