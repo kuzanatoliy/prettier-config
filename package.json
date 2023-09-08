@@ -1,6 +1,6 @@
 {
   "name": "@kuzanatoliorg/prettier-config",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "Kuzanatoliorg's prettier configuration",
   "main": "index.json",
   "author": "kuzanatoliy <njkznu@gmail.com>",
