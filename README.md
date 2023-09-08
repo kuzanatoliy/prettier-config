@@ -2,6 +2,10 @@
 
 Shared configuration to use prettier library into scope of @kuzantoliorg projects.
 
+## Precondition
+
+The package requires installation of [prettier package](https://www.npmjs.com/package/prettier)
+
 ## Usage
 
 ### Install:
