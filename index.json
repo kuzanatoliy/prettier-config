@@ -17,5 +17,7 @@
   "htmlWhitespaceSensitivity": "css",
   "endOfLine": "lf",
   "embeddedLanguageFormatting": "off",
-  "singleAttributePerLine": false
+  "singleAttributePerLine": false,
+  "checkIgnorePragma": false,
+  "objectWrap": "preserve"
 }
